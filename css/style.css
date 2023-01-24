@@ -1,0 +1,276 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+html{
+  font-size: 62.5%;
+}
+body{
+font-weight: 700;
+text-transform: uppercase;
+box-sizing: border-box;
+ font-family: 'Lato',sans-serif;
+
+}
+.header{
+    background-position: top;
+    height: 100vh;
+    background-image:linear-gradient(to left bottom,rgba(126, 213, 111, 0.36) ,  rgba(40,180,131,0.8)),url('../img/hero.jpg');
+    position: relative;
+    clip-path:polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    transition:all 1s ease;
+   
+}
+
+.logo-box{
+   position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+.logo{
+    height: 3.5rem;
+}
+
+.text-box{
+   position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.heading-primary{
+   text-transform: uppercase;
+    color: #fff;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary-main{
+  
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    overflow:hidden;
+}
+
+
+
+
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    font-weight: 700;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+        
+    }
+    80%{
+        transform: translateX(1rem)
+    }
+    100%{
+            opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+        
+    }
+    80%{
+        transform: translateX(-1rem)
+    }
+    100%{
+            opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    background-color:#fff ;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 10rem;
+    
+}
+
+
+.pgination{
+    position:relative;
+    display:flex;
+    z-index:100;
+}
+.pgination .next{
+  
+    position:absolute;
+    top:-100px;
+    right:-40%;
+    background:#fff;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+  cursor:pointer;
+}
+
+.pgination .prev{
+   
+    position:absolute;
+    top:-100px;
+    left:-40%;
+    background:#fff;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    color:#000;
+   cursor:pointer; 
+}
+
+.pgination span{
+   
+    font-size:40px;
+   
+}
+
+
+.card{
+   display:flex;
+   justify-content:center;
+   width:100%;
+
+  
+}
+.card .card-item{
+    display:flex;
+    justify-content:center;
+   background:green;
+   width:400px;
+   height:400px;
+   margin:0 50px;
+   overflow:hidden;
+   
+}
+.card .card-item image{
+  
+   width:100%;
+
+}
+.card .card-item.active{
+  
+   width:80%;
+   height:400px;
+   margin:0 15px;
+   
+}
+
+.bars .open{
+    position:absolute;
+    top:5%;
+    left:5%;
+ color:#fff;
+ padding:10px;
+ font-size:24px;
+ cursor:pointer;
+    z-index:1100;  
+}
+.close{
+    visibility:hidden;
+    position:absolute;
+    top:5%;
+    left:5%;
+ color:#fff;
+ padding:10px;
+ font-size:24px;
+ cursor:pointer;
+    z-index:1100;  
+}
+nav{
+   
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    width:100%;
+    height:100%;
+    z-index:1000;
+    transition:transform 0.3s ease;
+    
+}
+.nav{
+    visibility:hidden;
+}
+nav ul{
+    width:50%;
+    background:tomato;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    list-style:none;
+    transform:translateX(-500%);
+}
+nav .ul.active{
+    width:50%;
+    background:tomato;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    list-style:none;
+    transform:translateX(0);
+    transition:transform 0.3s ease;
+}
+nav .ul li {
+    list-style:none;
+    text-decoration:none;
+    margin-bottom:20px;
+    padding:10px;
+}
+nav .ul li a{
+    text-decoration:none;
+color:#fff;
+text-transform:uppercase;
+font-size:24px;
+
+}
+nav .imgss{
+    width:50%;
+    transform:translateY(-120%);
+    
+}
+nav .imgss.active{
+    width:50%;
+    transform:translateY(0);
+    transition:transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
